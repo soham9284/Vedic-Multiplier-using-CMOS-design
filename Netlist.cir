@@ -1,0 +1,89 @@
+***2 BIT  VEDIC MULTIPLIER***
+
+VA0 1 0 pulse (2 0 0 0 0 2.5 5)
+VA1 2 0 pulse (4 0 0 0 0 5 7.5)
+VB0 3 0 pulse (6 0 0 0 0 7.5 10)
+VB1 4 0 pulse (8 0 0 0 0 10 12.5)
+VDD 5 0 dc 2.5V
+
+.model nmod nmos level=54 version=4.7
+M1 10 1 0 0 nmod w=100u l=10u
+M2 11 2 0 0 nmod w=100u l=10u
+M3 12 3 0 0 nmod w=100u l=10u
+M4 13 4 0 0 nmod w=100u l=10u
+
+M5 14 10 0 0 nmod w=100u l=10u
+M6 14 12 0 0 nmod w=100u l=10u
+M7 15 11 0 0 nmod w=100u l=10u
+M8 15 12 0 0 nmod w=100u l=10u
+M9 16 10 0 0 nmod w=100u l=10u
+M10 16 13 0 0 nmod w=100u l=10u
+M11 17 11 0 0 nmod w=100u l=10u
+M12 17 13 0 0 nmod w=100u l=10u
+
+M13 18 15 0 0 nmod w=100u l=10u
+M14 19 16 0 0 nmod w=100u l=10u
+M15 20 17 0 0 nmod w=100u l=10u
+
+M16 27 26 0 0 nmod w=100u l=10u
+
+M17 22 19 23 23 nmod w=100u l=10u
+M18 23 18 0 0 nmod w=100u l=10u
+M19 22 16 24 24 nmod w=100u l=10u
+M20 24 15 0 0 nmod w=100u l=10u
+
+M21 31 20 29 29 nmod w=100u l=10u
+M22 29 27 0 0 nmod w=100u l=10u
+M23 31 17 30 30 nmod w=100u l=10u
+M24 30 26 0 0 nmod w=100u l=10u
+
+M25 26 19 0 0 nmod w=100u l=10u
+M26 26 18 0 0 nmod w=100u l=10u
+
+M27 33 20 0 0 nmod w=100u l=10u
+M28 33 27 0 0 nmod w=100u l=10u
+
+.model pmod pmos level=54 version=4.7
+M29 10 1 5 5 pmod w=200u l=10u
+M30 11 2 5 5 pmod w=200u l=10u
+M31 12 3 5 5 pmod w=200u l=10u
+M32 13 4 5 5 pmod w=200u l=10u
+
+M33 18 10 5 5 pmod w=200u l=10u
+M34 14 12 18 18 pmod w=200u l=10u
+M35 19 11 5 5 pmod w=200u l=10u
+M36 15 12 19 19 pmod w=200u l=10u
+M37 20 10 5 5 pmod w=200u l=10u
+M38 16 13 20 20 pmod w=200u l=10u
+M39 21 11 5 5 pmod w=200u l=10u
+M40 17 13 21 21 pmod w=200u l=10u
+
+M41 18 15 5 5 pmod w=200u l=10u
+M42 19 16 5 5 pmod w=200u l=10u
+M43 20 17 5 5 pmod w=200u l=10u
+
+M44 27 26 5 5 pmod w=200u l=10u
+
+M45 21 19 5 5 pmod w=200u l=10u
+M46 21 18 5 5 pmod w=200u l=10u
+M47 22 16 21 21 pmod w=200u l=10u
+M48 22 15 21 21 pmod w=200u l=10u
+
+M49 28 20 5 5 pmod w=200u l=10u
+M50 28 27 5 5 pmod w=200u l=10u
+M51 31 17 28 28 pmod w=200u l=10u
+M52 31 26 28 28 pmod w=200u l=10u
+
+M53 25 19 5 5 pmod w=200u l=10u
+M54 26 18 25 25 pmod w=200u l=10u
+
+M55 32 20 5 5 pmod w=200u l=10u
+M56 33 27 32 32 pmod w=200u l=10u
+
+.tran 0.1 50
+.control
+run
+plot V(1) V(2) V(3) V(4)
+plot V(14) V(22) V(31) V(33) 
+.endc
+.end
