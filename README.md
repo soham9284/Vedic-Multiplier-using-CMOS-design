@@ -24,7 +24,7 @@ Simple logic operations like AND, XOR were designed at the transistor level and 
 
  ![image](https://github.com/user-attachments/assets/8eadcffc-ccfe-4d86-a888-7c85abc21283)
 
-**Layout and Waveform** 
+**Layout and Waveform** <br>
 ![image](https://github.com/user-attachments/assets/90c52b9c-432a-4bf7-b3dc-dce96198bba5)
 
 ![image](https://github.com/user-attachments/assets/82447c34-2942-4e80-949c-8a752022d67c)
